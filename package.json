@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "npm run tsc:electron && cross-env NODE_ENV=development electron ./.electron/main.js",
+    "dev:next": "npx next dev",
     "build:next": "next build",
     "start": "cross-env NODE_ENV=production electron ./.electron/main.js",
     "tsc:electron": "tsc ./electron/main.ts --module commonjs  --outDir ./.electron",
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.0.0",
     "cross-env": "^7.0.3",
     "detect-port": "^1.5.1",
     "electron": "21.2.2",
